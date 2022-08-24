@@ -4,7 +4,7 @@ export class LitSearch extends LitElement {
   static get properties() {
     return {
       data : { type : Array },
-      result : { type : Array }
+      result : { type : Array },
     };
   }
 
@@ -74,11 +74,12 @@ export class LitSearch extends LitElement {
     return html`
       <div class="search">
         <input id="form" type="text" placeholder="Search" />
-        <button>Search</button>
+        <button @click="${this.filterData}">Search</button>
         <ul>
-        ${this.result.map(item => html`
-          <li>${item.name} - ${item.value}</li>
-        `)}
+          ${this.result.map(item => html`
+            <li>${item.name} - ${item.value}</li>
+          `)}
+
       </ul>
       </div>
     `;
@@ -86,11 +87,12 @@ export class LitSearch extends LitElement {
 
   filterData() {
     const input = this.shadowRoot.querySelector('#form').value.toLowerCase();
+
     this.data.map(product => {
-      const name = product.name.toLowerCase();
+      const name= product.name.toLowerCase();
 
       if(name.indexOf(input) !== -1) {
-        this.result.push(product);
+        this.result = [this.result.product];
       }
     }
     );
