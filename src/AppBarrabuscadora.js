@@ -8,16 +8,18 @@ export class AppBarrabuscadora extends LitElement {
 
   static get styles() {
     return css`
-
+      :host {
+        display: block;
+      }
+      h1{
+        text-align: center;
+      }
     `;
-  }
-
-  constructor() {
-    super();
   }
 
   render() {
     return html`
+      <h1>Search in LitElement</h1>
       <lit-search></lit-search>
     `;
   }
