@@ -66,6 +66,13 @@ export class LitSearch extends LitElement {
       {name : 'Tv Panasonic', value: '$8000'},
       {name : 'Dell', value: '$9000'},
       {name : 'Mac', value: '$10000'},
+      {name : 'Windows', value: '$11000'},
+      {name : 'Linux', value: '$12000'},
+      {name : 'Ubuntu', value: '$13000'},
+      {name : 'Debian', value: '$14000'},
+      {name : 'Arch', value: '$15000'},
+      {name : 'Nintendo', value: '$16000'},
+
     ];
     this.result = this.data;
   }
